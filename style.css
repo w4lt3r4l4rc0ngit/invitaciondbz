@@ -1,0 +1,57 @@
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:40px;
+}
+
+.container{
+margin-top:50px;
+}
+
+#esfera{
+width:200px;
+animation:flotar 3s infinite;
+}
+
+button{
+background:#ff7b00;
+border:none;
+padding:15px 25px;
+margin:10px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+color:white;
+}
+
+button:hover{
+background:#ff9c3d;
+}
+
+#shenlongContainer{
+display:none;
+margin-top:50px;
+}
+
+#shenlong{
+width:300px;
+animation:aparecer 2s; 
+}
+
+#invitacion{
+display:none;
+margin-top:40px;
+}
+
+@keyframes flotar{
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+}
+
+@keyframes aparecer{
+from{opacity:0}
+to{opacity:1}
+}
