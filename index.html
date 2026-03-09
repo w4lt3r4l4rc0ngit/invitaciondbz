@@ -1,70 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación Boda</title>
 
-<title>Las Esferas del Dragón</title>
+<style>
 
-<link rel="stylesheet" href="style.css">
+body{
+    margin:0;
+    font-family:Arial;
+    color:white;
+}
 
+/* FONDO CON OPACIDAD */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background-image:url("fondodbz.png");
+    background-size:cover;
+    background-position:center;
+
+    opacity:0.35; /* ajusta aqui la transparencia */
+
+    z-index:-1;
+}
+
+/* CONTENIDO */
+.contenido{
+    text-align:center;
+    padding-top:120px;
+}
+
+/* TITULO */
+h1{
+    font-size:55px;
+    color:#ffae00;
+    text-shadow:3px 3px 15px black;
+}
+
+/* TEXTO */
+p{
+    font-size:22px;
+}
+
+/* BOTON */
+.boton{
+    margin-top:30px;
+    padding:15px 35px;
+    font-size:20px;
+    background:#25D366;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.boton:hover{
+    transform:scale(1.1);
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="contenido">
 
-<h1>🟠 Has encontrado una Esfera del Dragón</h1>
-
-<p>Reúne el valor suficiente para invocar al dragón.</p>
-
-<img src="esfera.png" id="esfera">
-
-<button onclick="reunirEsferas()">Reunir las Esferas</button>
-
-</div>
-
-<div id="shenlongContainer"> 
-
-<img src="shenlong.png" id="shenlong">
-
-<h2>🐉 El dragón Shenlong ha sido invocado</h2>
-
-<p>Concederé tu deseo...</p>
-
-<button onclick="mostrarInvitacion()">Revelar misión</button>
-
-</div>
-
-<div id="invitacion">
-
-<h1>⚡ MISIÓN PARA GUERRERO Z ⚡</h1>
-
-<h2>11 de Julio de 2026</h2>
+<h1>🐉 Invitación Especial 🐉</h1>
 
 <p>
-Después de muchas batallas,
-ha llegado la misión más importante de mi vida.
+Las esferas del dragón han sido reunidas para un evento legendario...
 </p>
-
-<h2>💍 MI BODA 💍</h2>
 
 <p>
-Necesito a los guerreros más fuertes a mi lado.
+💍 Nuestra Boda  
+📅 11 de Julio 2026
 </p>
 
-<h2>¿Aceptas ser mi Caballero de Honor?</h2>
-
-<button onclick="aceptar()">ACEPTO LA MISIÓN</button>
-
-<button onclick="rechazar()">No puedo</button>
+<a href="https://wa.me/5215512345678?text=Hola%20confirmo%20mi%20asistencia%20a%20tu%20boda%20🐉" target="_blank">
+<button class="boton">
+Confirmar asistencia por WhatsApp
+</button>
+</a>
 
 </div>
-
-<audio id="dragonSound" src="dragon.mp3"></audio>
-
-<script src="script.js"></script>
 
 </body>
 </html>
