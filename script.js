@@ -29,3 +29,4 @@ function rechazar(){
 alert("Shenlong dice: lo reconsiderarás 😆");
 
 }
+
