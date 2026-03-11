@@ -1,12 +1,13 @@
 function reunirEsferas(){
+    window.location.href = "invitacion.html";
 
-document.getElementById("dragonSound").play();
+  document.getElementById("dragonSound").play();
 
-document.querySelector(".container").style.display="none";
+// document.querySelector(".container").style.display="none";
 
-setTimeout(()=>{ 
-document.getElementById("shenlongContainer").style.display="block";
-},2000);
+// setTimeout(()=>{ 
+// document.getElementById("shenlongContainer").style.display="block";
+// },2000);
 
 }
 
