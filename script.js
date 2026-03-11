@@ -1,7 +1,7 @@
 function reunirEsferas(){
     window.location.href = "invitacion.html";
 
-  document.getElementById("dragonSound").play();
+ // document.getElementById("dragonSound").play();
 
 // document.querySelector(".container").style.display="none";
 
