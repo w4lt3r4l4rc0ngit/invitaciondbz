@@ -56,14 +56,14 @@
       /* TITULO */
       .titulo {
         font-family: "Cinzel", serif;
-        font-size: 42px;
+        font-size: 45px;
         color: #ffae00;
         margin-bottom: 25px;
       }
 
       /* TEXTO */
       .texto {
-        font-size: 19px;
+        font-size: 21px;
         line-height: 1.7;
       }
 
@@ -84,27 +84,36 @@
       /* BOTON */
       .boton {
         margin-top: 35px;
-
         padding: 16px 35px;
-
         font-size: 18px;
-
         border: none;
-
         border-radius: 30px;
-
         background: #25d366;
-
         color: white;
-
         cursor: pointer;
-
         transition: 0.3s;
       }
 
       .boton:hover {
         transform: scale(1.1);
         box-shadow: 0 0 15px #25d366;
+      }
+
+      .boton_rechazar {
+        margin-top: 35px;
+        padding: 16px 35px;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        background: #d32525;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .boton_rechazar:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #d3252e;
       }
 
       .grande {
@@ -176,14 +185,16 @@
         </div>
       </div>
 
-      <a href="https://wa.me/5215512345678?text=Hola%20confirmo%20mi%20asistencia%20a%20tu%20boda%20🐉"
-  target="_blank">
-  <button id="btnConfirmar" class="boton">Confirmar</button>
-</a>
+      <a
+        href="https://wa.me/593982668599?text=!Hola%20Walter!...Acepto%20ser%20uno%20de%20los%20caballeros%20de%20tu%20boda."
+        target="_blank"
+      >
+        <button id="btnConfirmar" class="boton">Confirmar</button>
+      </a>
 
-<a>
-  <button id="btnRechazar" class="boton">Rechazar</button>
-</a>
+      <a>
+        <button id="btnRechazar" class="boton_rechazar">Rechazar</button>
+      </a>
     </div>
     <audio id="dragonSound" src="dragon.mp3"></audio>
   </body>
@@ -194,20 +205,26 @@
     };
   </script>
   <script>
-  const btnRechazar = document.getElementById("btnRechazar");
-  const btnConfirmar = document.getElementById("btnConfirmar");
+    const btnRechazar = document.getElementById("btnRechazar");
+    const btnConfirmar = document.getElementById("btnConfirmar");
 
-  let escala = 1; // tamaño inicial
+    let escala = 1;
 
-  btnRechazar.addEventListener("click", function () {
-    // Aumenta progresivamente
-    escala += 0.5;
+    btnRechazar.addEventListener("click", function () {
+      // Aumenta tamaño
+      escala += 0.5;
 
-    // Límite máximo (3x)
-    if (escala > 3) escala = 3;
+      // Si llega al máximo
+      if (escala >= 3) {
+        escala = 3;
 
-    btnConfirmar.style.transform = `scale(${escala})`;
-    btnConfirmar.style.transition = "transform 0.3s ease";
-  });
-</script>
+        // Oculta el botón rechazar
+        btnRechazar.style.display = "none";
+      }
+
+      // Aplica el tamaño
+      btnConfirmar.style.transform = `scale(${escala})`;
+      btnConfirmar.style.transition = "transform 0.3s ease";
+    });
+  </script>
 </html>
