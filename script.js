@@ -1,5 +1,5 @@
 function reunirEsferas(){
-    window.location.href = "invitacion.html";
+    window.location.href = "shenlong1.html";
 
  // document.getElementById("dragonSound").play();
 

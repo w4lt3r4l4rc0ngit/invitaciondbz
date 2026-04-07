@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Invitación Especial</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        color: white;
+      }
+
+      /* FONDO GIF */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-image: url("shenlong-shenron2.gif");
+        background-size: cover;
+        background-position: center;
+
+        /*opacity: 0.85;*/
+        z-index: -1;
+      }
+
+    </style>
+  </head>
+
+ <script>
+  setTimeout(function() {
+    window.location.href = "invitacion.html"; // aquí pones el nombre de tu otro archivo
+  }, 3000); // 1000 ms = 1 segundo
+</script>
+</html>
