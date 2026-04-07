@@ -106,6 +106,19 @@
         transform: scale(1.1);
         box-shadow: 0 0 15px #25d366;
       }
+
+      .grande {
+        animation: crecer 0.5s forwards;
+      }
+
+      @keyframes crecer {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(3);
+        }
+      }
     </style>
   </head>
 
@@ -163,12 +176,14 @@
         </div>
       </div>
 
-      <a
-        href="https://wa.me/5215512345678?text=Hola%20confirmo%20mi%20asistencia%20a%20tu%20boda%20🐉"
-        target="_blank"
-      >
-        <button class="boton">Confirmar asistencia por WhatsApp</button>
-      </a>
+      <a href="https://wa.me/5215512345678?text=Hola%20confirmo%20mi%20asistencia%20a%20tu%20boda%20🐉"
+  target="_blank">
+  <button id="btnConfirmar" class="boton">Confirmar</button>
+</a>
+
+<a>
+  <button id="btnRechazar" class="boton">Rechazar</button>
+</a>
     </div>
     <audio id="dragonSound" src="dragon.mp3"></audio>
   </body>
@@ -178,4 +193,21 @@
       sonido.play();
     };
   </script>
+  <script>
+  const btnRechazar = document.getElementById("btnRechazar");
+  const btnConfirmar = document.getElementById("btnConfirmar");
+
+  let escala = 1; // tamaño inicial
+
+  btnRechazar.addEventListener("click", function () {
+    // Aumenta progresivamente
+    escala += 0.5;
+
+    // Límite máximo (3x)
+    if (escala > 3) escala = 3;
+
+    btnConfirmar.style.transform = `scale(${escala})`;
+    btnConfirmar.style.transition = "transform 0.3s ease";
+  });
+</script>
 </html>
