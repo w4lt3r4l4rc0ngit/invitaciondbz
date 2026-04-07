@@ -1,33 +1,3 @@
-function reunirEsferas(){
-    window.location.href = "shenlong1.html";
-
- // document.getElementById("dragonSound").play();
-
-// document.querySelector(".container").style.display="none";
-
-// setTimeout(()=>{ 
-// document.getElementById("shenlongContainer").style.display="block";
-// },2000);
-
+function reunirEsferas() {
+  window.location.href = "shenlong1.html";
 }
-
-function mostrarInvitacion(){
-
-document.getElementById("shenlongContainer").style.display="none";
-
-document.getElementById("invitacion").style.display="block";
-
-}
-
-function aceptar(){
-
-alert("¡Excelente guerrero! Nos vemos en la boda ⚡");
-
-}
-
-function rechazar(){
-
-alert("Shenlong dice: lo reconsiderarás 😆");
-
-}
-

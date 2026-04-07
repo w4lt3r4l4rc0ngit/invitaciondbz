@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Invitación Especial</title>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-
     <style>
       body {
         margin: 0;
@@ -20,7 +18,6 @@
         color: white;
       }
 
-      /* FONDO GIF */
       body::before {
         content: "";
         position: fixed;
@@ -28,32 +25,23 @@
         left: 0;
         width: 100%;
         height: 100%;
-
         background-image: url("fondodbz.png");
         background-size: cover;
         background-position: center;
-
         opacity: 0.85;
         z-index: -1;
       }
 
-      /* CAJA CENTRAL */
       .invitacion {
         width: 70%;
         max-width: 850px;
-
         background: rgba(0, 0, 0, 0.75);
-
         padding: 50px;
-
         border-radius: 25px;
-
         text-align: center;
-
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
       }
 
-      /* TITULO */
       .titulo {
         font-family: "Cinzel", serif;
         font-size: 45px;
@@ -61,19 +49,16 @@
         margin-bottom: 25px;
       }
 
-      /* TEXTO */
       .texto {
         font-size: 21px;
         line-height: 1.7;
       }
 
-      /* DESTACADO */
       .resaltar {
         color: #ffae00;
         font-weight: 600;
       }
 
-      /* PREGUNTA FINAL */
       .pregunta {
         margin-top: 35px;
         font-size: 22px;
@@ -81,7 +66,6 @@
         color: #ffd700;
       }
 
-      /* BOTON */
       .boton {
         margin-top: 35px;
         padding: 16px 35px;
@@ -134,44 +118,34 @@
   <body>
     <div class="invitacion">
       <div class="titulo">🐉 Invitación Especial 🐉</div>
-
       <div class="texto">
         <!-- <p><b>Alan Pichu...</b></p> -->
-
         <p>
           Hay momentos en la vida que solo se viven una vez, y uno de los más
           importantes para mí será el día de mi boda.
         </p>
-
         <p>
           Después de muchas aventuras, entrenamientos intensos y subir de nivel
           como un verdadero Saiyajin… ha llegado la misión más importante de mi
           vida.
         </p>
-
         <p>
           Tu amistad significa mucho para mí y sería un honor contar contigo ese
           día.
         </p>
-
         <p class="resaltar">💍📅 Fecha de la boda: 11 de julio de 2026</p>
-
         <p>Incluso los guerreros más fuertes necesitan un equipo legendario.</p>
-
         <p>
           Por eso estoy reuniendo a los
           <span class="resaltar">Guerreros Z más poderosos</span> para que
           luchen a mi lado en esta misión.
         </p>
-
         <p>Y tú has sido seleccionado.</p>
-
         <p>
           🔥 <span class="resaltar">Tu misión, si decides aceptarla:</span
           ><br />
           Convertirte en <b>CABALLERO DE HONOR</b> y acompañarme en esta misión.
         </p>
-
         <p>
           Beneficios de la misión:
           <br />
@@ -179,19 +153,13 @@
           🎉 Fiesta nivel Super Saiyajin<br />
           🤝 Recuerdos legendarios
         </p>
-
         <div class="pregunta">
           ⚡ ¿ACEPTAS UNIRTE A LOS GUERREROS Z DE MI BODA? ⚡
         </div>
       </div>
-
-      <a
-        href="https://wa.me/593982668566?text=!Hola%20Walter!...Acepto%20ser%20uno%20de%20los%20caballeros%20de%20tu%20boda."
-        target="_blank"
-      >
+      <a href="https://wa.me/593982668566?text=!Hola%20Walter!...Acepto%20ser%20uno%20de%20los%20caballeros%20de%20tu%20boda." target="_blank">
         <button id="btnConfirmar" class="boton">Confirmar</button>
       </a>
-
       <a>
         <button id="btnRechazar" class="boton_rechazar">Rechazar</button>
       </a>
@@ -203,26 +171,16 @@
       let sonido = document.getElementById("dragonSound");
       sonido.play();
     };
-  </script>
-  <script>
+
     const btnRechazar = document.getElementById("btnRechazar");
     const btnConfirmar = document.getElementById("btnConfirmar");
-
     let escala = 1;
-
     btnRechazar.addEventListener("click", function () {
-      // Aumenta tamaño
       escala += 0.5;
-
-      // Si llega al máximo
       if (escala >= 3) {
         escala = 3;
-
-        // Oculta el botón rechazar
         btnRechazar.style.display = "none";
       }
-
-      // Aplica el tamaño
       btnConfirmar.style.transform = `scale(${escala})`;
       btnConfirmar.style.transition = "transform 0.3s ease";
     });
