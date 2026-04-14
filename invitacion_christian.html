@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Invitación Especial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        color: white;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("fondodbz.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.85;
+        z-index: -1;
+      }
+
+      .invitacion {
+        width: 70%;
+        max-width: 850px;
+        background: rgba(0, 0, 0, 0.75);
+        padding: 50px;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+      }
+
+      .titulo {
+        font-family: "Cinzel", serif;
+        font-size: 50px;
+        color: #ffae00;
+        margin-bottom: 25px;
+      }
+
+      .texto {
+        font-size: 24px;
+        line-height: 1.2;
+      }
+
+      .resaltar {
+        color: #ffae00;
+        font-weight: 600;
+      }
+
+      .pregunta {
+        margin-top: 35px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #ffd700;
+      }
+
+      .boton {
+        margin-top: 35px;
+        padding: 16px 35px;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        background: #25d366;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .boton:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #25d366;
+      }
+
+      .boton_rechazar {
+        margin-top: 35px;
+        padding: 16px 35px;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        background: #d32525;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .boton_rechazar:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #d3252e;
+      }
+
+      .grande {
+        animation: crecer 0.5s forwards;
+      }
+
+      @keyframes crecer {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(3);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="invitacion">
+      <div class="titulo">🐉 Invitación Especial 🐉</div>
+      <div class="texto">
+        <p><b>Christian...</b></p>
+
+        <p>
+          A lo largo de los años hemos coincidido en distintos momentos y
+          reuniones familiares, compartiendo espacios que poco a poco han ido
+          formando una buena amistad.
+        </p>
+
+        <p>
+          Es en esos momentos donde se construyen amistades que hacen que
+          la familia sea aún más especial.
+        </p>
+
+        <p>
+          Estoy por dar uno de los pasos más importantes de mi vida…
+          <span class="resaltar">mi boda.</span>
+        </p>
+
+        <p>
+          Y me gustaría contar contigo para compartir este día que marcará un
+          antes y un después.
+        </p>
+
+        <p class="resaltar">💍📅 Fecha de la boda: 11 de julio de 2026</p>
+        <p>Incluso los guerreros más fuertes necesitan un equipo legendario.</p>
+        <p>
+          Por eso estoy reuniendo a los
+          <span class="resaltar">Guerreros Z más poderosos</span> y tú eres uno de ellos.
+        </p>
+        <p>
+          🔥 <span class="resaltar">Tu misión, si decides aceptarla:</span
+          ><br />
+          Convertirte en <b>CABALLERO DE HONOR</b> y acompañarme en esta misión.
+        </p>
+        <p>
+          Beneficios de la misión:
+          <br />
+          🍻 Celebración épica<br />
+          🎉 Fiesta nivel Super Saiyajin<br />
+          🤝 Recuerdos legendarios
+        </p>
+        <div class="pregunta">
+          ⚡Cristian ¿aceptas ser parte de este momento tan importante en mi vida?⚡
+        </div>
+      </div>
+      <a
+        href="https://wa.me/593982668566?text=!Hola%20Walter!...Acepto%20ser%20uno%20de%20los%20caballeros%20de%20tu%20boda."
+        target="_blank"
+      >
+        <button id="btnConfirmar" class="boton">Confirmar</button>
+      </a>
+      <a>
+        <button id="btnRechazar" class="boton_rechazar">Rechazar</button>
+      </a>
+    </div>
+    <audio id="dragonSound" src="dragon.mp3"></audio>
+  </body>
+  <script>
+    window.onload = function () {
+      let sonido = document.getElementById("dragonSound");
+      sonido.play();
+    };
+
+    const btnRechazar = document.getElementById("btnRechazar");
+    const btnConfirmar = document.getElementById("btnConfirmar");
+    let escala = 1;
+    btnRechazar.addEventListener("click", function () {
+      escala += 0.5;
+      if (escala >= 3) {
+        escala = 3;
+        btnRechazar.style.display = "none";
+      }
+      btnConfirmar.style.transform = `scale(${escala})`;
+      btnConfirmar.style.transition = "transform 0.3s ease";
+    });
+  </script>
+</html>

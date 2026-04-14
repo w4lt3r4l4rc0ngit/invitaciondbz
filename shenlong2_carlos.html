@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Invitación Especial</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        color: white;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("shenlong-shenron2.gif");
+        background-size: cover;
+        background-position: center;
+
+        /*opacity: 0.85;*/
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <script>
+    setTimeout(function () {
+      window.location.href = "invitacion_carlos.html";
+    }, 2500); 
+  </script>
+</html>
